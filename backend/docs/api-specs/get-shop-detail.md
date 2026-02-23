@@ -95,16 +95,3 @@
   "path": "/api/shops/01JSHOP0000000000000000099"
 }
 ```
-
-## 取得するデータの範囲
-
-Shopを起点に、以下を結合して取得する：
-
-| テーブル | 結合条件 | 取得項目 |
-|---------|---------|---------|
-| `shops` | 起点 | id, name, introduction, particular |
-| `shop_images` | shops.id | type, image_url |
-| `coffee_beans` | shops.id | id, name, description, origin, farm, roast_level, processing_method |
-| `coffee_bean_images` | coffee_beans.id | type, image_url |
-| `coffee_bean_tastes` | coffee_beans.id | evaluation_value |
-| `tastes` | coffee_bean_tastes.tastes_id | name |
