@@ -62,16 +62,3 @@
   "path": "/api/coffee-list-groups/01JCLGR0000000000000000099"
 }
 ```
-
-## 取得するデータの範囲
-
-CoffeeListGroupを起点に、以下を結合して取得する：
-
-| テーブル | 結合条件 | 取得項目 |
-|---------|---------|---------|
-| `coffee_list_groups` | 起点 | id, description |
-| `coffee_list_childs` | coffee_list_group_id | - (結合用) |
-| `coffee_beans` | coffee_list_childs.coffee_bean_id | id, name, description, origin, farm, roast_level, processing_method |
-| `coffee_bean_images` | coffee_beans.id | type, image_url |
-| `coffee_bean_tastes` | coffee_beans.id | evaluation_value |
-| `tastes` | coffee_bean_tastes.tastes_id | name |
