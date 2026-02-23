@@ -1,0 +1,12 @@
+[tools]
+node = "24.10.0"
+pnpm = "10.24.0"
+aws-cli = "2.32.3"
+java = "25.0.1"
+
+terraform = "1.14.0"
+tflint = "latest"
+trivy = "latest"
+
+python = "3.12"
+uv = "latest"
